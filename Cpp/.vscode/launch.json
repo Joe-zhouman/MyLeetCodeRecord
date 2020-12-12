@@ -1,0 +1,28 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "(gdb) Launch", //名称 显示在调试窗口上
+        "type": "cppdbg", //配置 由插件提供
+        "request": "launch", //配置类型 可选择启动或附加
+        "args": [], //启动调试器时额外配置的参数
+        "stopAtEntry": true, //是否选择在程序入口暂停 由于我一直忘记设置断点所以我选择是
+        "cwd": "${fileDirname}", //工作目录
+        "environment": [],
+        "preLaunchTask": "compile cpp file before debug", //在调试前运行的task 编译
+        "MIMode": "gdb", //使用的调试模式 由于我是Linux 所以选择gdb
+        "miDebuggerPath": "D:\\softwares\\mingw64\\bin\\gdb.exe",
+        //!!!!!!!!!!//注意 Windows用户设置为gdb MacOS用户设置为lldb
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        //程序目录+名称
+        //"miDebuggerPath": "",//应修改为gdb的目录
+        //调试器目录，非必要 如不写则调用插件目录下的一个gdb
+        "setupCommands": [{ //增加对STL的输出支持 仅限gdb7以上的版本
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+        }]
+    }]
+}

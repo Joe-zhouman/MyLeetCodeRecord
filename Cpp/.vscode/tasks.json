@@ -1,0 +1,115 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [{ //配置任务 compile cpp file with O2
+            "label": "compile cpp file with O2", //任务名称
+            "type": "shell", //运行在终端
+            "group": { //任务所属执行组
+                "kind": "build",
+                /*
+                可选
+                build：生成组
+                test：测试组
+                由于这里要编译代码 所以选择生成组
+                */
+                "isDefault": true
+                //是否时默认生成任务，选择是，这样可以直接使用快捷键Ctrl+Shift+B执行任务
+            },
+            "command": "g++", //执行命令，由于是编译所以选择g++
+            "args": [
+                "${file}", //需要编译的任务名称
+                "${fileBasenameNoExtension}",
+                //生成文件的名称
+                //！！！！！！！！！//windows应改为"-o${fileBasenameNoExtension}"
+                "-g", //使生成文件可以调试
+                "-lstdc++", //链接
+                "-lm", //链接
+                "-std=gnu++11", //使用c++11标准
+                "-Wfatal-errors", //出现error就退出
+                "-O2" //开启O2优化
+            ],
+            //以上为必要设置
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
+            "promptOnClose": true
+        },
+        //和上一个相同，只是取消了O2优化(不然的话debug的时候会发生错误)
+        {
+            "label": "compile cpp file before debug",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileBasenameNoExtension}",
+                "-g",
+                "-lstdc++",
+                "-lm",
+                "-std=gnu++11",
+                "-Wfatal-errors",
+            ],
+            "type": "shell",
+            "group": "build",
+            "presentation": {
+                "echo": false,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "promptOnClose": true,
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        //运行代码
+        {
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "label": "run the file",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true
+            },
+            "dependsOn": "compile cpp file with O2"
+        }
+    ]
+}
