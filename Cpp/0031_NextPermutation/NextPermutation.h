@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-class solution {
+class Solution {
 public:
 	static void Directly(vector<int>& nums) {
 		int n = nums.size();

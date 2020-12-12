@@ -7,7 +7,7 @@
 int main() {
 	vector<int> nums = {-1, 2, 1, -4};
 	int target = 1;
-	cout << solution::TwoThread(nums, target);
+	cout << Solution::TwoThread(nums, target);
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

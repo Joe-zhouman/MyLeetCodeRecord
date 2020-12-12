@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-class solution {
+class Solution {
 public:
 	static int TwoThread(vector<int>& nums, int target) {
 		const int n = nums.size();

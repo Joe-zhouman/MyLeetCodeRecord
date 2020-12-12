@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-class solution {
+class Solution {
 public:
 	static bool CheckPossibility(vector<int>& nums);
 };

@@ -6,7 +6,7 @@
 
 int main() {
 	vector<int> nums = {1, 3, 2};
-	solution::nextPermutation(nums);
+	Solution::Directly(nums);
 	for (auto num : nums) { cout << num << ' '; }
 }
 

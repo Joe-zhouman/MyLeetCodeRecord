@@ -81,6 +81,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1342_numberOfSteps", "1342_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "0218_getSkyline", "0218_getSkyline\0218_getSkyline.vcxproj", "{15C91405-45EB-4058-873C-904B91ECDF99}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "0050_Pow", "0050_Pow\0050_Pow.vcxproj", "{8CD5C1ED-11D2-4977-8193-A9F05A7A3E84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -401,6 +403,14 @@ Global
 		{15C91405-45EB-4058-873C-904B91ECDF99}.Release|x64.Build.0 = Release|x64
 		{15C91405-45EB-4058-873C-904B91ECDF99}.Release|x86.ActiveCfg = Release|Win32
 		{15C91405-45EB-4058-873C-904B91ECDF99}.Release|x86.Build.0 = Release|Win32
+		{8CD5C1ED-11D2-4977-8193-A9F05A7A3E84}.Debug|x64.ActiveCfg = Debug|x64
+		{8CD5C1ED-11D2-4977-8193-A9F05A7A3E84}.Debug|x64.Build.0 = Debug|x64
+		{8CD5C1ED-11D2-4977-8193-A9F05A7A3E84}.Debug|x86.ActiveCfg = Debug|Win32
+		{8CD5C1ED-11D2-4977-8193-A9F05A7A3E84}.Debug|x86.Build.0 = Debug|Win32
+		{8CD5C1ED-11D2-4977-8193-A9F05A7A3E84}.Release|x64.ActiveCfg = Release|x64
+		{8CD5C1ED-11D2-4977-8193-A9F05A7A3E84}.Release|x64.Build.0 = Release|x64
+		{8CD5C1ED-11D2-4977-8193-A9F05A7A3E84}.Release|x86.ActiveCfg = Release|Win32
+		{8CD5C1ED-11D2-4977-8193-A9F05A7A3E84}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

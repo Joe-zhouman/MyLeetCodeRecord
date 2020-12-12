@@ -8,7 +8,7 @@
 #include <stack>
 #include <string>
 #include <sstream>
-class solution {
+class Solution {
 public:
     int eval_rpn(std::vector<std::string>& tokens) {
         std::stack<int> ans;

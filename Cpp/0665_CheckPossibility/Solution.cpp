@@ -1,6 +1,6 @@
 #include "Solution.h"
 
-bool solution::CheckPossibility(vector<int>& nums) {
+bool Solution::CheckPossibility(vector<int>& nums) {
 	if (nums.size() < 3)
 		return true;
 	int unsorted = nums[0] > nums[1] ? 1 : 0;

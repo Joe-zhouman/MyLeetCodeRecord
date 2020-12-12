@@ -10,7 +10,7 @@
 #include <vector>
 using namespace std;
 
-class solution {
+class Solution {
 public:
 	static vector<string> split(string str) {
 		vector<string> str_vector;
