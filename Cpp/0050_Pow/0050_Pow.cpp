@@ -2,10 +2,14 @@
 //
 
 #include <iostream>
-
+#include "Pow.h"
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+    double a = 2;
+	int n = -2;
+	cout << Solution::Directly(a, n)<<endl;
+	cout << Solution::BitCount(a, n) << endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

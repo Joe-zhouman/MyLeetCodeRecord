@@ -17,8 +17,27 @@ class Solution {
 public:
 	static double Directly(double x, int n) {
 		double ans = 1;
-		for (int i = 0; i < n; ++i) {
-			ans *= x;
+		bool flag = true;
+		if (n < 0) { n = -n; flag = false; }
+		for (int i = 0; i < n; ++i) { ans = flag ? ans * x : ans / x; }
+		return ans;
+	}
+
+	static double BitCount(double x, int n) {
+		double ans = 1;
+		bool flag = true;
+		if (n < 0) {
+			if (n == INT_MIN) {
+				n = -(n + 1);
+				ans = 1 / x;
+			}
+			else { n = -n; }
+			flag = false;
+		}
+		while (n != 0) {
+			if (n % 2 == 1) { ans = flag? ans * x:ans/x; }
+			x *= x;
+			n >>= 1;
 		}
 		return ans;
 	}
