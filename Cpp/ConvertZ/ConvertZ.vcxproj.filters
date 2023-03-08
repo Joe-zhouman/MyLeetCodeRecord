@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="0004_MedianOfTwoArrays.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Solution.cpp">
+    <ClCompile Include="ConvertZ.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
