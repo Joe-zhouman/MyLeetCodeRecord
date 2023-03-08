@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{15688ce7-f9f5-46c0-940a-a0b292a7fd8f}</ProjectGuid>
-    <RootNamespace>My0004MedianOfTwoArrays</RootNamespace>
+    <ProjectGuid>{69e690ac-d042-4326-8c2c-a5275651879f}</ProjectGuid>
+    <RootNamespace>LeetcodeCpp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="0004_MedianOfTwoArrays.cpp" />
-    <ClCompile Include="Solution.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Solution.h" />
+    <ClCompile Include="LeetcodeCpp.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
