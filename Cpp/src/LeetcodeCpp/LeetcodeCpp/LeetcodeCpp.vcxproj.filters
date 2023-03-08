@@ -19,4 +19,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="solution_0008.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_0010.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="solution_0012.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="solution_0017.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="solution_0021.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="solution_0023.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
